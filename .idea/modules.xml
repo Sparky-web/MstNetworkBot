@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/mstw-hack-ass.iml" filepath="$PROJECT_DIR$/.idea/mstw-hack-ass.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../vk-aliexpress-parser/.idea/vk-aliexpress-parser.iml" filepath="$PROJECT_DIR$/../vk-aliexpress-parser/.idea/vk-aliexpress-parser.iml" />
+    </modules>
+  </component>
+</project>
