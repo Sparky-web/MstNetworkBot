@@ -7,6 +7,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 
+const mstAccount = fs.readFileSync("./account.txt").toString().split(":")
+
 app.get("/getData", async (req, res) => {
     const data = readJsonFile("./accounts.json");
     res.send(data)
@@ -62,7 +64,7 @@ app.post("/getItem", (req, res) => {
         const data = readJsonFile("./accounts.json");
         const account = data.find(el => el.login.toString() === req.body.login);
         if(account) {
-            takeItemsFromOneAccount("vladyxa111", "343370728", account).then(e => {
+            takeItemsFromOneAccount(mstAccount[0], mstAccount[1], account).then(e => {
                 const newData = data.map(el => el.login === req.body.login ? {...el, data: []} : el);
                 saveFile("./accounts.json", newData);
                 res.send("OK")

@@ -3,6 +3,8 @@ const {Builder, By, Key, until} = require('selenium-webdriver');
 const easyVK = require("easyvk");
 const readline = require("readline");
 
+const mstAccount = fs.readFileSync("./account.txt").toString().split(":")
+
 function random(min, max) {
     return Math.floor(min + Math.random() * (max - min));
 }
@@ -140,7 +142,7 @@ async function openCards(accounts) {
 async function getItems(accounts) {
     const newAccounts = [];
     for(let e of accounts) {
-        newAccounts.push(await takeItemsFromOneAccount("здесь логин от мст", "а тут пароль", e))
+        newAccounts.push(await takeItemsFromOneAccount(mstAccount[0], mstAccount[1], e))
     }
     return newAccounts
 }
