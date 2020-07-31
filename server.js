@@ -3,6 +3,8 @@ const {readJsonFile, saveFile, openCard, openCards, getItems, checkAccounts, tak
 const app = express();
 const cors = require("cors");
 
+const fs = require("fs")
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
