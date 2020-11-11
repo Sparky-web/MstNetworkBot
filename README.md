@@ -1,6 +1,6 @@
 # MstNetworkBot
 
-This is bot that abuses popular minecraft server in russia - MstNetwork. 
+This is bot that abuses popular minecraft server in Russia - MstNetwork. 
 
 MstNetwork has a wesite with daily bonus, to grab daily bonus you need to auth with VK (social network in Russia). 
 If you want to take bonus items to you account, you need to connect minecraft account with VK account. You also can detach you minecraft account.
